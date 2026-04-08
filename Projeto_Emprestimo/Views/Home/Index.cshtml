@@ -1,8 +1,91 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Projeto_Emprestimo.Models.Livro
+
+@{
+    ViewData["Title"] = "CodLivro";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2 style="text-align:center;">Novo Livro</h2>
+
+<div class="center">
+    @using (Html.BeginForm("Index","Livros", FormMethod.Post, new { ecntype = "multipart/form-data" })){
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group space-around-flex">
+            <div class="">
+                @Html.LabelFor(model => model.nomeLivro, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nomeLivro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(Model => Model.nomeLivro, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group center">
+            <div>
+                <label class="control-label col-md-2" for="file" />Capa Livro</label>
+            </div>
+            <div class="col-md-10">
+                <input type="file" name="file" id="file" /> <br />
+            </div>
+        </div>
+        <div class="form-group center">
+            <div class="col-md-10">
+                @ViewBag.mgs <br />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar Produto" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+    }
 </div>
+
+
+
+
+<!--<h1>CodLivro</h1>
+
+<h4>Livro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index" asp-controller="Livro" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="codLivro" type="hidden" class="form-control"></label>
+                <span asp-validation-for="codLivro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nomeLivro" class="control-label"></label>
+                <input asp-for="nomeLivro" class="form-control" />
+                <span asp-validation-for="nomeLivro" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="file" cname="file" id="file"/>
+
+                <span asp-validation-for="imagemLivro" class="text-danger"></span>
+            </div>
+@*VAMOS ADD ESTA MENSAGEM*@
+@ViewBag.msg
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>-->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
