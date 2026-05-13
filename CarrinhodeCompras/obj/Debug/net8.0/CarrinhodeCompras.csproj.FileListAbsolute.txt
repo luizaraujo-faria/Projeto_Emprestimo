@@ -408,3 +408,4 @@ C:\Users\3MTEC\Desktop\CarrinhodeCompra\CarrinhodeCompra-main\CarrinhodeCompras\
 C:\Users\3MTEC\Desktop\CarrinhodeCompra\CarrinhodeCompra-main\CarrinhodeCompras\obj\Debug\net8.0\CarrinhodeCompras.pdb
 C:\Users\3MTEC\Desktop\CarrinhodeCompra\CarrinhodeCompra-main\CarrinhodeCompras\obj\Debug\net8.0\CarrinhodeCompras.genruntimeconfig.cache
 C:\Users\3MTEC\Desktop\CarrinhodeCompra\CarrinhodeCompra-main\CarrinhodeCompras\obj\Debug\net8.0\ref\CarrinhodeCompras.dll
+C:\Users\3MTEC\Desktop\CarrinhodeCompra\CarrinhodeCompra-main\CarrinhodeCompras\obj\Debug\net8.0\CarrinhodeCompras.sourcelink.json

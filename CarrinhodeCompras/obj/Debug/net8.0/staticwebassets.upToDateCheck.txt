@@ -4,6 +4,7 @@ wwwroot\Imagens\harry potter 2.jpg
 wwwroot\Imagens\harry potter.webp
 wwwroot\Imagens\percy.jpg
 wwwroot\Imagens\rainha.jpg
+wwwroot\Imagens\shaolin.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -62,4 +63,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\Imagens\shaolin.jpg
