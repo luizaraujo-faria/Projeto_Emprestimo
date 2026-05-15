@@ -12,7 +12,7 @@ namespace CarrinhodeCompras.Repository
         private readonly string _conexaoMySQL;
         public CategoriaRepository(IConfiguration conf)
         {
-            _conexaoMySQL = conf.GetConnectionString("ConexaoSQL");
+            _conexaoMySQL = conf.GetConnectionString("ConexaoMySQL");
         }
 
         public Task<IViewComponentResult> InvokeAsync()
@@ -26,8 +26,8 @@ namespace CarrinhodeCompras.Repository
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Categoria", conexao);
 
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbCategoria", conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 
                 DataTable dt = new DataTable();
@@ -47,8 +47,6 @@ namespace CarrinhodeCompras.Repository
                 }
                 return catList;
             }
-
         }
     }
-   
-    }
+}
